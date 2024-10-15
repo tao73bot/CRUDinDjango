@@ -47,12 +47,12 @@
 - `import os`
 
 - add this part at end
-- `MEDIA_URL = '/media'`
-- `MEDIA_ROOT = os.path.join(BASE_DIR,'media')`
 - `STATIC_URL = 'static/'`
 - `STATICFILES_DIR = [os.path.join(BASE_DIR,'static')]`
+- `MEDIA_URL = '/media'`
+- `MEDIA_ROOT = os.path.join(BASE_DIR,'media')`
 
-### in urls.py add static media settings
+### 13. in urls.py add static media settings
 
     from django.conf import settings 
     from django.conf.urls.static import static
@@ -63,3 +63,20 @@
 
 
 
+### 14. Create app
+
+- `python manage.py startapp app_name`
+
+- After Creating app add some files like urls.py
+
+### 15. Tell settings file about created_app
+
+    INSTALLED_APPS = [
+    ...,
+    ...,
+    ...,
+    ...,
+    ...,
+    ...,
+    "app_name",
+]
