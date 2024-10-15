@@ -30,3 +30,36 @@
 
 - See if you have manage.py. if you have it then `python manage.py runserver`
 
+### 9. Make migrations
+
+- `python manage.py makemigrations`
+
+### 10. Migrate Project
+
+- `python manage.py migrate`
+
+### 11. Create Super user for Admin
+
+- `python manage.py createsuperuser`
+
+### 12. Import os in settings.py file
+
+- `import os`
+
+- add this part at end
+- `MEDIA_URL = '/media'`
+- `MEDIA_ROOT = os.path.join(BASE_DIR,'media')`
+- `STATIC_URL = 'static/'`
+- `STATICFILES_DIR = [os.path.join(BASE_DIR,'static')]`
+
+### in urls.py add static media settings
+
+    from django.conf import settings 
+    from django.conf.urls.static import static
+    ...
+    ...
+    ...
+    urlpatterns = [ path("admin/", admin.site.urls),] + static    (settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+
