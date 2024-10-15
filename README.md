@@ -80,3 +80,8 @@
     ...,
     "app_name",
 ]
+
+
+### 16. To upload photo add Pillow.
+
+- `python -m pip install Pillow`
